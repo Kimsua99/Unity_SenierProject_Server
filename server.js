@@ -12,8 +12,7 @@ require('./model/Account')
 
 //Setup the routes
 require('./routes/authenticationRoute')(app);
-const port = 13756;
 
-app.listen(port, () => {
+app.listen(keys.port, () => {
     console.log("Listening on " + keys.port)
 });
