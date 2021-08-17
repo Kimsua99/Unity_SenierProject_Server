@@ -4,8 +4,17 @@
   "description": "Backend for Spectrum",
   "main": "index.js",
   "scripts": {
+    "dev": "npx nodemon server.js",
+    "production": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sua",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
