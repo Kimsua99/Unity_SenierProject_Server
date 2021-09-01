@@ -1,10 +1,13 @@
 const express = require('express');
 const keys = require('./config/keys.js');
 const app = express();
+const bodyParser = require('body-parser');
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 //Setting up DB
 const mongoose = require('mongoose');
-// const { urlencoded } = require('express');
 mongoose.connect( keys.mongoURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Setup database models
